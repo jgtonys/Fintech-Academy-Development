@@ -8,6 +8,10 @@ const AVSwagger = require('../AVSwagger');
 // swagger api setting
 app.use('/api-docs', AVSwagger.swaggerUi.serve, AVSwagger.swaggerUi.setup(AVSwagger.swaggerSpec));
 
+// ejs
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine','ejs');
+
 
 // bodyParser setting
 app.use(bodyParser.json());
