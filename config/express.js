@@ -9,7 +9,7 @@ const AVSwagger = require('../AVSwagger');
 app.use('/api-docs', AVSwagger.swaggerUi.serve, AVSwagger.swaggerUi.setup(AVSwagger.swaggerSpec));
 
 // ejs
-app.set('views',path.join(__dirname,'views'));
+app.set('views',path.join(__dirname,'../client/dist'));
 app.set('view engine','ejs');
 
 

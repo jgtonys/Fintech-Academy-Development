@@ -1,7 +1,7 @@
 module.exports = {
     port: process.env.PORT || 8080,
     db: {
-      name: 'kisa_project',
+      name: 'sigbi',
       username: 'root',
       password: 'k123123'
     },

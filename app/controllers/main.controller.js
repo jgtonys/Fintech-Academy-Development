@@ -9,5 +9,5 @@ const path = require('path');
  *
  **/
 module.exports.mainpage = (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../../client/dist', 'index.html'));
+    res.render('index');
 };

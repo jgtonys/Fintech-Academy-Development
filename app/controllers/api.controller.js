@@ -20,7 +20,7 @@ module.exports.authResult = (req, res, next) => {
       code : code,
       client_id : 'l7xx74cb3784a9c2434882132b32d82cece6',
       client_secret : 'e7bb72e60ffb4e7e9981a9c8a53340a7',
-      redirect_uri : 'http://localhost:3000/authResult',
+      redirect_uri : 'http://localhost:8080/authResult',
       grant_type : 'authorization_code'
     }
   }
@@ -36,19 +36,20 @@ module.exports.authResult = (req, res, next) => {
  * 계좌 실명 조회
  **/
 
- module.exports.userMe = (req, res, next) => {
-   const token, use_num;
+ /*module.exports.userMe = (req, res, next) => {
+   //const token;
+   const use_num;
    const qs = 'user_seq.no' + use_num;
    let uequestURL = 'https://testapi.open-platform.or.kr/user/me?';
    option = {
      header : {
-       'Authorization : Bearer ' + token;
+       'Authorization : Bearer ';
      }
    }
    request(option,function(error,response,body) {
      console.log(JSON.parse(body)); //
    })
- }
+ }*/
 
 
  /**
@@ -57,7 +58,7 @@ module.exports.authResult = (req, res, next) => {
   **/
 
 
-  module.exports.generateToken = (req, res, next) => {
+  /*module.exports.generateToken = (req, res, next) => {
     var qs =
      "?response_type=code&" +
      "client_id=l7xx74cb3784a9c2434882132b32d82cece6&" +
@@ -74,10 +75,10 @@ module.exports.authResult = (req, res, next) => {
     request(option,function(error,response,body) {
       console.log(JSON.parse(body)); //
     })
-  }
+  }*/
 
 
- var qs =
+ /*var qs =
   "?response_type=code&" +
   "client_id=l7xx74cb3784a9c2434882132b32d82cece6&" +
   "redirect_uri=http://localhost:3000/authResult&" +
@@ -101,4 +102,4 @@ module.exports.authResult = (req, res, next) => {
       });
 
       //console.log("server log : " + input_name,input_phone,input_age);
-  })
+  })*/
