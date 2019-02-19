@@ -1,0 +1,54 @@
+
+@font-face{
+    font-family:'LotteMartDream';
+    font-style:normal;
+    font-weight:400;
+    src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+   }
+   @font-face{
+    font-family:'LotteMartDream';
+    font-style:normal;
+    font-weight:700;
+    src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+   }
+   @font-face{
+    font-family:'LotteMartDream';
+    font-style:normal;
+    font-weight:300;
+    src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+   }
+*{
+    font-family:"LotteMartDream", "Georgia", "Times", serif;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+header{
+    background-color: rgba(236, 240, 138, 0.87);
+}
+h1{margin:0;}
+a{
+    text-align: center;
+    margin: auto;
+
+}
+ul#menu li{}
+ul#menu {overflow:hidden;width:100%;margin:20px 0 4px;padding:0;border-bottom:0.1em solid #ccc;}
+ul#menu li {float:left;margin:0 0 0 0.5em;padding:0;border-top:0.1em solid #ccc;border-left:0.1em solid #ccc;border-right:0.1em solid #ccc;background-color:#eef;list-style:none;} 
+ul#menu li a {float:left;padding:0 7px;text-decoration: none;color:#000;font-family:"Courier New", Courier, monospace;text-align:center;font-size:18px;line-height:18px;letter-spacing:-2px}
+ul#menu li a .txt_page {float:left;padding-right:4px}
+ul#menu li#current {background-color:#ccc}

@@ -31,10 +31,12 @@ body{
 }
 
 /* Full-width input fields */
-label{
-  width: 111px;
+
+p{
   height: 14px;
   color: #403a3a;
+  margin-left: 0px;
+  margin-bottom: 3px;
   text-align: left;
 }
 h1{
