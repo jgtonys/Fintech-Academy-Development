@@ -20,9 +20,7 @@
       url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
  }
 
-input{
-  background-color: #fccd05;
- }
+
 body{
   background-color: rgba(236, 240, 138, 0.87);
   text-align: center;
@@ -54,7 +52,10 @@ h1{
   text-align: center;
   color: #403a3a;
 }
-
+input{
+  background-color: #fccd05;
+  border-radius: 16px;
+}
 .box1{
   width: 30%;
   height: 40%;
