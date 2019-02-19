@@ -10,4 +10,5 @@ module.exports = (app) => {
       .get(userController.getall);
     app.route('/delete_user')
       .post(userController.delete_user);
+    app.route
 };

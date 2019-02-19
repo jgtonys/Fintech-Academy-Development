@@ -11,3 +11,7 @@ const path = require('path');
 module.exports.mainpage = (req, res, next) => {
     res.render('index');
 };
+
+module.exports.paymentpage = (req,res,next) =>{
+    res.render('payment');
+}
