@@ -20,9 +20,10 @@
       url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
  }
 
+input{
+  background-color: #fccd05;
+ }
 body{
-  margin: 100px;
-  padding: 100px;
   background-color: rgba(236, 240, 138, 0.87);
   text-align: center;
 }
@@ -32,7 +33,12 @@ body{
 }
 
 /* Full-width input fields */
-
+label{
+  width: 111px;
+  height: 14px;
+  color: #403a3a;
+  text-align: left;
+}
 h1{
   margin: auto;
   box-sizing: content-box;
@@ -45,7 +51,7 @@ h1{
   font-stretch: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   color: #403a3a;
 }
 
@@ -72,18 +78,26 @@ input[type=text]:focus, input[type=password]:focus {
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
+  width: 40%;
+
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  border-radius:16px;
+  background-color: #e39227;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
+  text-align: center;
+  margin-left: 50%;
+  
+  width: 242px;
+  height: 60px;
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.16);
 }
 
 button:hover {
