@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style/index.css" type="text/css">
+  
+</head>
+<body>
+
+<form>
+  <div class="container">
+    <img src="image/logo_small.png" style="width:500px; height:200px"><br><br><br>
+    <h1>회원가입 - 로그인정보</h1><br>
+    <hr>
+
+    <div class="box1">
+      <p for="email"><b>&nbsp ID</b></p>
+    <input type="text" placeholder="이름 입력" name="email" id="name" >
+
+    <p for="psw"><b>&nbsp 비밀번호</b></p>
+    <input type="password" placeholder="비밀번호 입력" name="psw" id="id" >
+
+    <p for="psw-repeat"><b>&nbsp 비밀번호 확인</b></p>
+    <input type="password" placeholder="비밀번호 확인" name="psw-repeat" id="password" >
+
+    <button type="button" id="loginbtn">로그인</button>
+    </div>
+  </div>
+</form>
+
+<script language=JavaScript>
+    var loginbtn = document.getElementById('loginbtn');
+    loginbtn.addEventListener('click', function(){
+        window.location.href= "home";
+    });
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
+</html>

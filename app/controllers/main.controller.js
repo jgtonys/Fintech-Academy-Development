@@ -15,3 +15,11 @@ module.exports.mainpage = (req, res, next) => {
 module.exports.paymentpage = (req,res,next) =>{
     res.render('payment');
 }
+
+module.exports.loginpage = (req,res,next) =>{
+    res.render('login');
+}
+
+module.exports.homepage = (req,res,next) =>{
+    res.render('home');
+}
