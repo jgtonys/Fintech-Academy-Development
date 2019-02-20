@@ -115,6 +115,8 @@ module.exports.signin = (req, res, next) => {
  *       description: user creating database error
  */
 module.exports.signup = (req,res,next) => {
+    console.log(req.body);
+    console.log("blakbjasldf");
     let user_id = req.body.user_id;
     let user_name = req.body.user_name;
     let user_password = req.body.user_password;
@@ -129,17 +131,34 @@ module.exports.signup = (req,res,next) => {
             }).catch(nextStep);
         },
         (nextStep) => {
+            db.user.findOne({
+                where: { user_id : "dummy" }
+            }).then(data => {
+                if (!data) next({statusCode: 406, message: 'no validate token'});
+                else nextStep(null,data);
+            }).catch(nextStep);
+        },
+        (data,nextStep) => {
             db.user.create({
                 user_id: user_id,
                 user_name: user_name,
                 user_password: user_password,
-                user_type: user_type
+                user_type: user_type,
+                access_token: data.access_token,
+                user_num: data.user_num
             })
             .then(created => {
                 if(!created) next({statusCode: 405, message: 'user creating error!'});
-                else nextStep(null,created);
+                else nextStep(null);
             })
             .catch(nextStep);
+        },
+        (nextStep) => {
+          db.user.destroy({where: {user_id: 'dummy'}})
+          .then(result => {
+             nextStep(null,{code:"success"});
+          })
+          .catch(nextStep);
         },
     ], (err, result) => {
         if (err) next(err);

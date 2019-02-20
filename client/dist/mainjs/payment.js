@@ -1,7 +1,5 @@
 $('#trans').click(function(){
-    
-    var ceo_code = 0; 
-
+    var ceo_code = 0;
     $.ajax({
         url: "/payment_server_side.js",
         type: "POST",
@@ -10,7 +8,6 @@ $('#trans').click(function(){
              zipcode: ceo_code
          }
     }).done(function(result){
-
         $('account').val = result.account;
         $('money').val = result.money;
     })
