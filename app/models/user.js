@@ -1,7 +1,8 @@
 /* jshint indent: 2 */
+const bcrypt = require('bcrypt');
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('user', {
+  const user = sequelize.define('user', {
     user_id: {
       type: DataTypes.STRING(30),
       allowNull: false,
@@ -36,4 +37,45 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'user'
   });
+
+
+  // Class Methods
+	user.cryptPassword = (plainText) => {
+		return new Promise((resolve, reject) => {
+			bcrypt.genSalt(10, (err, salt) => {
+				if (err) reject(err);
+				else {
+					bcrypt.hash(plainText, salt, (err, hash) => {
+						if (err) reject(err);
+						else resolve(hash);
+					});
+				}
+			});
+		});
+	};
+
+	// Instance Methods
+	user.prototype.authenticate = (plainText,db_password) => {
+		return new Promise((resolve, reject) => {
+			bcrypt.compare(plainText, db_password, (err, res) => {
+				if (err) reject(err);
+				else resolve(res);
+			});
+		});
+	};
+
+	// Hooks(automatically called)
+	user.beforeCreate((usr, options) => {
+		if (usr.user_password) {
+			return user.cryptPassword(usr.user_password)
+				.then((hash) => {
+					usr.user_password = hash;
+				})
+				.catch((err) => {
+					if (err) throw new Error(err);
+				});
+		}
+  });
+
+  return user;
 };

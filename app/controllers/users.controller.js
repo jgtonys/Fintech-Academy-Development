@@ -42,7 +42,6 @@ module.exports.signin = (req, res, next) => {
     if (!user_id || !user_password) {
 		return next({statusCode: 400, message: res.__('invalidParams')});
 	}
-
     async.waterfall([
         (nextStep) => {
             db.user.findOne({
@@ -53,18 +52,21 @@ module.exports.signin = (req, res, next) => {
             }).catch(nextStep);
         },
         (user, nextStep) => {
-            user.authenticate(password,user.user_password).then(valid => {
-				if (valid) {
-					let data = _.pick(user.get(), ['user_id', 'user_name', 'user_password', 'user_type']);
-					let token = jwt.generate(data);
-					nextStep(null, { token,data });//original : nextStep(null, { token, data });
-				} else nextStep({statusCode: 402, message: 'invalid password'});
-            }).catch(nextStep);
+          console.log(user_password);
+          console.log(user.user_password);
+          user.authenticate(user_password,user.user_password).then(valid => {
+    				if (valid) {
+    					let data = _.pick(user.get(), ['user_id', 'user_name', 'user_password', 'user_type']);
+    					let token = jwt.generate(data);
+              let code = "success";
+    					nextStep(null, { token, data, code });//original : nextStep(null, { token, data });
+    				} else nextStep({statusCode: 402, message: 'invalid password'});
+          }).catch(nextStep);
         }
     ], (err, result) => {
         if (err) next(err);
         else {
-            res.json(result);
+          res.json(result);
         }
     });
 };

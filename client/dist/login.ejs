@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="style/index.css" type="text/css">
-  
+
 </head>
 <body>
 
@@ -14,10 +14,10 @@
 
     <div class="box1">
       <p for="email"><b>&nbsp ID</b></p>
-    <input type="text" placeholder="이름 입력" name="email" id="name" >
+    <input type="text" placeholder="이름 입력" name="email" id="user_id" >
 
     <p for="psw"><b>&nbsp 비밀번호</b></p>
-    <input type="password" placeholder="비밀번호 입력" name="psw" id="id" >
+    <input type="password" placeholder="비밀번호 입력" name="psw" id="user_password" >
 
     <button type="button" class="loginbtn" id="loginbtn">로그인</button>
     </div>
@@ -25,13 +25,33 @@
 </form>
 
 <script language=JavaScript>
-    var loginbtn = document.getElementById('loginbtn');
+    /*var loginbtn = document.getElementById('loginbtn');
     loginbtn.addEventListener('click', function(){
         window.location.href= "home";
-    });
+    });*/
 
 </script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+  $(".loginbtn").click(function(){
+    var user_id = $("#user_id").val();
+    var user_password = $("#user_password").val();
+    $.ajax({
+      url:'/signin',
+      type: 'post',
+      data: {
+        user_id : user_id,
+        user_password : user_password,
+      }
+    }).done(function(result) {
+      if(result.code == "success") window.location.href = "/home";
+      window.sessionStorage.setItem('user_id',result.data.user_id);
+      window.sessionStorage.setItem('user_name',result.data.user_name);
+      window.sessionStorage.setItem('user_type',result.data.user_type);
+      window.sessionStorage.setItem('user_token',result.token);
+    });
+  })
+</script>
 </body>
 </html>
