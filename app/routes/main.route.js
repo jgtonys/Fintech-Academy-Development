@@ -8,6 +8,8 @@ module.exports = (app) => {
       .get(maincontroller.paymentpage);
     app.route('/login')
       .get(maincontroller.loginpage);
-      app.route('/home')
+    app.route('/home')
       .get(maincontroller.homepage);
+    app.route('/signup_complete')
+      .get(maincontroller.signup_complete);
 }

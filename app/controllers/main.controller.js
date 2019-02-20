@@ -23,3 +23,7 @@ module.exports.loginpage = (req,res,next) =>{
 module.exports.homepage = (req,res,next) =>{
     res.render('home');
 }
+
+module.exports.signup_complete = (req,res,next) => {
+  res.render('signup_complete');
+}
