@@ -27,6 +27,10 @@ module.exports = function(sequelize, DataTypes) {
         key: 'user_id'
       },
       unique: true
+    },
+    hourlyWage: {
+      type: DataTypes.INTEGER(11),
+      allowNull: true
     }
   }, {
     tableName: 'ceo'
