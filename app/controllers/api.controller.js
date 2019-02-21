@@ -105,6 +105,13 @@ module.exports.receive = (req, res, next) => {
   })
 }
 
+module.exports.apitest = (req, res, next) => {
+  console.log("blabla");
+  let code = req.body.code;
+  console.log(code);
+
+}
+
 
 module.exports.send = (req, res, next) => {
   var requestURL = 'https://testapi.open-platform.or.kr/v1.0/transfer/withdraw';

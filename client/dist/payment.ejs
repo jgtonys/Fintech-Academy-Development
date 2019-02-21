@@ -11,13 +11,9 @@
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
             <!-- Bootstrap core CSS -->
-        <link href="/style/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-        
+            <link href="/style/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <!-- Custom styles for this template -->
             <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-            <!-- Custom styles for this template -->
-            <!--<link href="blog.css" rel="stylesheet"> -->
     </head>
     <body>
             <div class="container">
@@ -37,7 +33,7 @@
                         </div>
                       </div>
                     </header>
-                    
+
                     <div class="nav-scroller py-1 mb-2" style="background-color:#e9d419 ;">
                       <nav class="nav d-flex justify-content-between">
                         <a class="p-2 text-white" href="home">홈</a>
@@ -46,15 +42,15 @@
                         <a class="p-2 text-white" href="#">설정</a>
                       </nav>
                     </div>
-                  
+
                     <div class="jumbotron p-4 p-md-5 text-dark rounded " style="background-color: rgba(236, 240, 138, 0.87);">
-                      
+
                         <h1 style="text-align: left; margin-left: 0px ;color: rgba(112, 112, 112, 0.75);">이번달 자동 이체 금액</h1>
                         <p id="account" style="color: #707070;">국민 520702-01-265789</p>
-                        <p id="money">5000000원</p>
+                        <p id="money">8800000원</p>
                         <p class="detail" id="detailbtn"> 자세히보기</p>
                     </div>
-                    
+
                     <div id="tb" style="background-color: rgba(236, 240, 138, 0.87);">
                       <!-- 자세히보기 부분이 나타나는 부분 -->
                     </div>
@@ -69,33 +65,17 @@
                             if(check == true){
                               var count = 5;
                               var name = ["김혁","지은","유라","정연","준규"];
-                              var money= ["5555555","5555555","5555555","5555555","5555555"];
+                              var money= ["1500000","1300000","2000000","2500000","1500000"];
                               var wait=["8350원","5000원","5000원","10000원"];
-                            
+
                               var  str="<h1 style='margin-left: 0px ;color: rgba(112, 112, 112, 0.75);'>자세히 보기</h1>";
-                                
-                                /*
-                              $.ajax({
-                                  url: "",
-                                  type: "POST",
-                                  datatype: 'json',
-                                  data: {
-                                      zipcode: ceo_code
-                                  }
-                              }).done(function(result){
-                                  count = result.count;
-                                  name = result.name;
-                                  money = result.money;
-                                  wait = result.wait;
-                              })
-                              */
                               for(var i=0; i<count; i++){
                                 str+= "<div style='border-bottom:1px solid orange;'><img src='/image/staff_small.png' style='max-width:100% ; max-height:100%; width:100px; height:100px'>"
                                   +"<font style='margin-left:10px; margin-top:10px; font-size:40px ; color: rgba(112, 112, 112, 0.75); '>"+name[i]+"</font>"
                                   +"<font style='width:40% ;margin-left:40%; margin-top:10px; font-size:50px ; text-align:right ;color: #666666;'><sub>총 "+money[i]+"원</sub></font>"
                                   +"<div></div><table style='width:80% ;margin-left:10%;border:1px ㄴ rgba(112, 112, 112, 0.75); border-radius:10px; text-align:center; '><tr><td style='background-color: #ee8a8a'><p>기초시급</p><p>"+wait[0]+"</p></td><td style='background-color: #9ff699;'><p>주휴수당</p><p>"+wait[1]+"</p></td><td style='background-color: #f1ea7b'><p>추가수당</p><p>"+wait[2]+"</p></td><td style='background-color: #82caf3;'><p>보험료</p><p>"+wait[3]+"</p></td></tr></table><br></div>";
                               }
-                              
+
                               document.getElementById('tb').innerHTML=str;
                               check = false;
                               document.getElementById('detailbtn').innerHTML="감추기"
@@ -106,9 +86,9 @@
                               document.getElementById('tb').innerHTML=str;
                               document.getElementById('detailbtn').innerHTML="자세히보기"
                             }
-                          
+
                           })
-                  
+
                         </script>
 
                   <script src="/mainjs/payment.js"></script>

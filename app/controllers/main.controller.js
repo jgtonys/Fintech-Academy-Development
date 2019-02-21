@@ -24,6 +24,10 @@ module.exports.paymentpage = (req,res,next) =>{
     res.render('payment');
 }
 
+module.exports.testpage = (req,res,next) =>{
+    res.render('testpage2');
+}
+
 module.exports.loginpage = (req,res,next) =>{
     res.render('login');
 }

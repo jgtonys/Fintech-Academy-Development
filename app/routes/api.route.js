@@ -10,4 +10,6 @@ module.exports = (app) => {
       .get(apiController.mydata);
     app.route('/mylist')
       .get(apiController.mylist);
+    app.route('/apitest')
+      .get(apiController.apitest);
 };

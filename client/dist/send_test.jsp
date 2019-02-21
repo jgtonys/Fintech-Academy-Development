@@ -1,0 +1,27 @@
+{
+    "api_tran_id": "AA12349BHZ1324K82AL3",
+    "api_tran_dtm": "20160310101921567",
+    "rsp_code": "A0000",
+    "rsp_message": "",
+    "dps_bank_code_std": "097",
+    "dps_bank_code_sub": "1230001",
+    "dps_bank_name": "핀테크은행",
+    "dps_account_num_masked": "000-1230000-***",
+    "dps_print_content": "입금계좌인자내역",
+    "dps_account_holder_name": "김 혁",
+    "bank_tran_id": "12345678901234567890",
+    "bank_tran_date": "20160310",
+    "bank_code_tran": "098",
+    "bank_rsp_code": "000",
+    "bank_rsp_message": "",
+    "fintech_use_num": "123456789012345678901234",
+    "account_alias": "급여계좌",
+    "bank_code_std": "098",
+    "bank_code_sub": "1230001",
+    "bank_name": "오픈은행",
+    "account_num_masked": "000-1230000-***",
+    "print_content": "출금계좌인자내역",
+    "account_holder_name": "사 장 님",
+    "tran_amt": "10000"
+}
+    
