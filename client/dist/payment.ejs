@@ -8,6 +8,8 @@
             <title>Blog Template · Bootstrap</title>
             <link rel="stylesheet" href="style/payment.css" type="text/css">
             <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
             <!-- Bootstrap core CSS -->
         <link href="/style/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
@@ -15,14 +17,14 @@
             <!-- Custom styles for this template -->
             <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
             <!-- Custom styles for this template -->
-            <link href="blog.css" rel="stylesheet">
+            <!--<link href="blog.css" rel="stylesheet"> -->
     </head>
     <body>
             <div class="container">
                     <header class="blog-header py-3" style="background-color:#e9d419">
                       <div class="row flex-nowrap justify-content-between align-items-center">
                         <div class="col-4 pt-1">
-                          <img src="image/logo_small.png" style="width:100px; height:50px;">
+                          <img src="image/logo_2.png" style="width:100px; height:50px;">
                         </div>
                         <div class="col-4 text-center">
                           <a class="blog-header-logo text-muted" href="#">경찰병원역 스타벅스점</a>
@@ -50,42 +52,64 @@
                         <h1 style="text-align: left; margin-left: 0px ;color: rgba(112, 112, 112, 0.75);">이번달 자동 이체 금액</h1>
                         <p id="account" style="color: #707070;">국민 520702-01-265789</p>
                         <p id="money">5000000원</p>
-                        <p id="detail" style="margin-left:90% ; text-align: left"> 자세히보기</p>
-                        <p><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-                      
+                        <p class="detail" id="detailbtn"> 자세히보기</p>
                     </div>
+                    
+                    <div id="tb" style="background-color: rgba(236, 240, 138, 0.87);">
+                      <!-- 자세히보기 부분이 나타나는 부분 -->
+                    </div>
+
+                        <script language="JavaScript">
+
+                          var check = true;
+                          var ceo_code = 0;
+
+
+                          $('#detailbtn').click(function(){
+                            if(check == true){
+                              var count = 5;
+                              var name = ["김혁","지은","유라","정연","준규"];
+                              var money= ["5555555","5555555","5555555","5555555","5555555"];
+                              var wait=["8350원","5000원","5000원","10000원"];
+                            
+                              var  str="<h1 style='margin-left: 0px ;color: rgba(112, 112, 112, 0.75);'>자세히 보기</h1>";
+                                
+                                /*
+                              $.ajax({
+                                  url: "",
+                                  type: "POST",
+                                  datatype: 'json',
+                                  data: {
+                                      zipcode: ceo_code
+                                  }
+                              }).done(function(result){
+                                  count = result.count;
+                                  name = result.name;
+                                  money = result.money;
+                                  wait = result.wait;
+                              })
+                              */
+                              for(var i=0; i<count; i++){
+                                str+= "<div style='border-bottom:1px solid orange;'><img src='/image/staff_small.png' style='max-width:100% ; max-height:100%; width:100px; height:100px'>"
+                                  +"<font style='margin-left:10px; margin-top:10px; font-size:40px ; color: rgba(112, 112, 112, 0.75); '>"+name[i]+"</font>"
+                                  +"<font style='width:40% ;margin-left:40%; margin-top:10px; font-size:50px ; text-align:right ;color: #666666;'><sub>총 "+money[i]+"원</sub></font>"
+                                  +"<div></div><table style='width:80% ;margin-left:10%;border:1px ㄴ rgba(112, 112, 112, 0.75); border-radius:10px; text-align:center; '><tr><td style='background-color: #ee8a8a'><p>기초시급</p><p>"+wait[0]+"</p></td><td style='background-color: #9ff699;'><p>주휴수당</p><p>"+wait[1]+"</p></td><td style='background-color: #f1ea7b'><p>추가수당</p><p>"+wait[2]+"</p></td><td style='background-color: #82caf3;'><p>보험료</p><p>"+wait[3]+"</p></td></tr></table><br></div>";
+                              }
+                              
+                              document.getElementById('tb').innerHTML=str;
+                              check = false;
+                              document.getElementById('detailbtn').innerHTML="감추기"
+                              }
+                            else{
+                              check = true;
+                              str="";
+                              document.getElementById('tb').innerHTML=str;
+                              document.getElementById('detailbtn').innerHTML="자세히보기"
+                            }
+                          
+                          })
                   
-                    <div class="row mb-2">
-                      <div class="col-md-6" >
-                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                          <div class="col p-4 d-flex flex-column position-static" style="background-color: rgba(236, 240, 138, 0.87);">
-                            <strong class="d-inline-block mb-2 text-primary">World</strong>
-                            <h3 class="mb-0">Featured post</h3>
-                            <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">aaa</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
-                          </div>
-                          <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                          <div class="col p-4 d-flex flex-column position-static" style="background-color: rgba(236, 240, 138, 0.87);">
-                            <strong class="d-inline-block mb-2 text-success">Design</strong>
-                            <h3 class="mb-0">Post title</h3>
-                            <div class="mb-1 text-muted">Nov 11</div>
-                            <p class="mb-auto">aaa</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
-                          </div>
-                          <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        </script>
 
                   <script src="/mainjs/payment.js"></script>
     </body>

@@ -40,6 +40,15 @@
 }
 td{
   height: 50px;
+  font-family: MalgunGothic;
+  font-size: 19px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  color: rgba(112, 112, 112, 0.75);
+  padding-top: 10px;
 }
 .detail, .detail2{
   width: 150px;
@@ -53,9 +62,9 @@ td{
   letter-spacing: normal;
   text-align: center;
   color: #707070;
-  margin-left:80% ;
+  margin-left:80% ; 
   text-align: center;
-  padding-top:5px;
+  padding-top:5px; 
 }
 .detail:hover{
   background-color: #e9d419;

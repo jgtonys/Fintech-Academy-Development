@@ -32,6 +32,10 @@ module.exports.homepage = (req,res,next) =>{
     res.render('home');
 }
 
+module.exports.home_update = (req,res,next) =>{
+    res.render('home_update');
+}
+
 module.exports.signup_complete = (req,res,next) => {
   res.render('signup_complete');
 }

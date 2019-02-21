@@ -14,6 +14,8 @@ module.exports = (app) => {
       .get(maincontroller.loginpage);
     app.route('/home')
       .get(maincontroller.homepage);
+    app.route('/home_update')
+      .get(maincontroller.home_update);
     app.route('/signup_complete')
       .get(maincontroller.signup_complete);
     app.route('/signup_choose')

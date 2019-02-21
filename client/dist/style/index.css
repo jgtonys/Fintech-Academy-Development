@@ -54,13 +54,45 @@ h1{
   text-align: center;
   color: #403a3a;
 }
+#smalltitle{
+  margin-top: 70px;
+  margin-bottom: 50px;
+
+  box-sizing: content-box;
+  width: 200px;
+  height: 20px;
+  font-family: 12LotteMartDream;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #403a3a;
+}
+
+#middletitle{
+  width: 241px;
+  height: 70px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-family: 12LotteMartDream;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
 input{
   background-color: #fccd05;
   border-radius: 16px;
 }
 .box1{
-  width: 30%;
-  height: 40%;
+  width: 300px;
+  height: 500px;
   text-align: center;
 
 }
@@ -70,7 +102,7 @@ input[type=text], input[type=password] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background-color: rgba(236, 240, 138, 0.87);
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -106,6 +138,59 @@ button {
 button:hover {
   opacity:1;
 }
+
+.loginBtn, .signupBtn{
+  
+    font-family: 12LotteMartDream;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  
+    width:350px;
+    height: 80px;
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fccd05;
+  
+    margin: auto;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  label{
+    width: 174px;
+    height: 29px;
+    font-family: 12LotteMartDream;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1e1515;
+    padding: 5px;
+  }
+
+  #indextitle{
+    width: 312px;
+    height: 70px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: 12LotteMartDream;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0a0606;
+    margin-bottom: 10px;
+  }
 
 /* Extra styles for the cancel button */
 .cancelbtn {
