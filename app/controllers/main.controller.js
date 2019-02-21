@@ -12,6 +12,14 @@ module.exports.mainpage = (req, res, next) => {
     res.render('index');
 };
 
+module.exports.alba_signup = (req, res, next) => {
+    res.render('alba_signup');
+};
+
+module.exports.sajang_signup = (req, res, next) => {
+    res.render('sajang_signup');
+};
+
 module.exports.paymentpage = (req,res,next) =>{
     res.render('payment');
 }
@@ -30,4 +38,20 @@ module.exports.signup_complete = (req,res,next) => {
 
 module.exports.progress = (req,res,next) => {
   res.render('progress_bar');
+}
+
+module.exports.signup_choose = (req,res,next) => {
+  res.render('signup_choose');
+}
+
+module.exports.signup_additional = (req,res,next) => {
+  res.render('signup_additional');
+}
+
+module.exports.alba_signup_complete = (req,res,next) => {
+  res.render('alba_signup_complete');
+}
+
+module.exports.sajang_signup_complete = (req,res,next) => {
+  res.render('sajang_signup_complete');
 }

@@ -23,6 +23,7 @@
 *{
     font-family:"LotteMartDream", "Georgia", "Times", serif;
 }
+
 #money{
     height: 51px;
     font-family: NanumGothic;
@@ -36,6 +37,39 @@
     color: #000000;
     margin: 0;
     padding: 0;
+}
+td{
+  height: 50px;
+}
+.detail, .detail2{
+  width: 150px;
+  height: 30px;
+  font-family: 12LotteMartHappy;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #707070;
+  margin-left:80% ;
+  text-align: center;
+  padding-top:5px;
+}
+.detail:hover{
+  background-color: #e9d419;
+}
+
+.tdtext{
+  font-family: MalgunGothic;
+  font-size: 19px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  color: rgba(112, 112, 112, 0.75);
 }
 #account{
   height: 40px;
@@ -74,9 +108,3 @@ a{
     margin: auto;
 
 }
-ul#menu li{}
-ul#menu {overflow:hidden;width:100%;margin:20px 0 4px;padding:0;border-bottom:0.1em solid #ccc;}
-ul#menu li {float:left;margin:0 0 0 0.5em;padding:0;border-top:0.1em solid #ccc;border-left:0.1em solid #ccc;border-right:0.1em solid #ccc;background-color:#eef;list-style:none;} 
-ul#menu li a {float:left;padding:0 7px;text-decoration: none;color:#000;font-family:"Courier New", Courier, monospace;text-align:center;font-size:18px;line-height:18px;letter-spacing:-2px}
-ul#menu li a .txt_page {float:left;padding-right:4px}
-ul#menu li#current {background-color:#ccc}

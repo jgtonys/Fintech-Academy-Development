@@ -5,86 +5,29 @@
 </head>
 <body>
 
-<form>
   <div class="container">
     <img src="image/logo_small.png" style="width:500px; height:200px"><br><br><br>
-    <h1>회원가입 - 로그인정보</h1><br>
-    <hr>
-
-    <div class="box1">
-      <p for="id"><b>&nbsp ID</b></p>
-    <input type="text" placeholder="ID 입력" name="email" id="user_id" >
-
-    <div class="box2">
-      <p for="id"><b>&nbsp 이름</b></p>
-    <input type="text" placeholder="이름 입력" name="email" id="user_name" >
-
-    <p for="psw"><b>&nbsp 비밀번호</b></p>
-    <input type="password" placeholder="비밀번호 입력" name="psw" id="user_password" >
-
-    <p for="psw-repeat"><b>&nbsp 비밀번호 확인</b></p>
-    <input type="password" placeholder="비밀번호 확인" name="psw-repeat" id="user_password_repeat" >
-
-    <button type="button" class="signupbtn">모바일 인증하기</button>
-    <button type="button" class="signup">회원가입</button>
+    <h1 id = "startingTitle">안녕하세요. 알바관리자<br>'시그비'에 오신것을 환영합니다.</h1>
+    <label>이미 ID가 있다면</label>
+    <div class = login>
+        <button type="button" class="loginBtn">로그인</button>
+    </div>
+    <label>첫 이용자라면</label>
+    <div class = signup>
+        <button type="button" class="signupBtn">회원가입</button>
+    </div>
     </div>
   </div>
-</form>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-//http://testapi.open-platform.or.kr/oauth/2.0/authorize
-var qs =
-  "?response_type=code&" +
-  "client_id=l7xx6bd36b771b5247198bce82dbd8641b26&" +
-  "redirect_uri=http://localhost:8080/authResult&" +
-  "scope=login inquiry transfer&" +
-  "auth_type=0&" +
-  "invoke_type=ajax";
-
-  $(".signupbtn").click(function(){
-      $.ajax({
-        url:'https://testapi.open-platform.or.kr/oauth/2.0/authorize2' + qs,
-        type: 'get',
-      }).done(function(result) {
-        console.log(result);
-        window.name = "parents";
-        var tmpwin = window.open("about:blank");
-        tmpwin.location.href = result.location;
-        $(".signupbtn").prop("disabled",true);
-        $(".signupbtn").css("background","gray");
-        $(".signupbtn").text('완료');
-      });
+  $(".loginBtn").click(function(){
+    window.location.href = "/login";
   })
-
-  /*
-  let user_id = req.body.user_id;
-  let user_name = req.body.user_name;
-  let user_password = req.body.user_password;
-  let user_type = req.body.user_type;
-
-  */
-
-  $(".signup").click(function(){
-    var user_id = $("#user_id").val();
-    var user_name = $("#user_name").val();
-    var user_password = $("#user_password").val();
-    $.ajax({
-      url:'/signup',
-      type: 'post',
-      data: {
-        user_id : user_id,
-        user_name : user_name,
-        user_password : user_password,
-        user_type : 1
-      }
-    }).done(function(result) {
-      console.log(result.code);
-      if(result.code == "success") window.location.href = "/signup_complete";
-    });
+  $(".signupBtn").click(function(){
+      window.location.href = "/signup_choose";
   })
-
 </script>
 
 </body>

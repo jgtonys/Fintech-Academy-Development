@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style/index.css" type="text/css">
+
+</head>
+<body>
+
+<form>
+  <div class="container">
+    <h1>회원가입-사업장 등록</h1><br>
+    <div class="box1">
+
+    <p for="ceo_name"><b>&nbsp 이름</b></p>
+    <input type="text" placeholder="이름을 입력해주세요." name="ceo_name" id="name" >
+
+    <p for="business_num"><b>&nbsp 사업자번호 등록</b></p>
+    <input type="text" placeholder="사업자번호를 입력해주세요." name="business_num" id="id" >
+    
+    <p for="business_address"><b>&nbsp 사업장 소재지</b></p>
+    <input type="text" placeholder="사업장 소재지를 입력해주세요." name="business_address" id="id" >
+
+    </div>
+  </div>
+</form>
+
+<script language=JavaScript>
+    var loginbtn = document.getElementById('loginbtn');
+    loginbtn.addEventListener('click', function(){
+        window.location.href= "home";
+    });
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
+</html>

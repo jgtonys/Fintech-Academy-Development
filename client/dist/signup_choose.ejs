@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style/index.css" type="text/css">
+</head>
+<body>
+<style>
+    .centered { display: table; margin-left: auto; margin-right: auto; margin-top:5em; margin-bottom:2.5em;}
+    .centered2 { display: table; margin-left: auto; margin-right: auto; margin-top:1em; margin-bottom:1em;}
+    .centered3 {display: table; margin-left: 500px; margin-right: auto; margin-top:5em; margin-bottom:2em;}
+</style>
+
+<div class="centered3">
+<b>
+    회원가입
+</b>
+</div>
+
+<div class=centered style="font-size:25px">
+    <li>
+        회원 유형을 선택해주세요.
+    </li>
+</div>
+<!-- <div class="centered"> -->
+<div class="sajang" style="width: 150px;height: 150px;border: 1px solid #fccd05;border-radius:500px;color:white;background-color:#fccd05;font-size:30px;float:left;margin-right: 50px;margin-left: 450px;">
+    <div class="centered2" style="padding-top:1em">
+        <b>사장님</b>
+    </div>
+</div>
+<div class="alba" style="width: 150px;height: 150px;border: 1px solid #fccd05;border-radius:500px;color:white;background-color:#fccd05;font-size:30px;float:left;">
+    <div class="centered2" style="padding-top:1em">
+        <b>알바생</b>
+    </div>
+</div>
+    <div style="width: 300px;height: 400px;border: 1px solid rgba(236, 240, 138, 0.87);border-radius: 10px;"></div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+  $(".sajang").click(function(){
+    window.location.href = "/sajang_signup";
+  })
+  $(".alba").click(function(){
+      window.location.href = "/alba_signup";
+  })
+</script>
+
+
+</body>
+</html>
