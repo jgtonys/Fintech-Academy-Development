@@ -12,4 +12,9 @@ module.exports = (app) => {
       .get(maincontroller.homepage);
     app.route('/signup_complete')
       .get(maincontroller.signup_complete);
+
+
+    //test route
+    app.route('/progress')
+      .get(maincontroller.progress);
 }

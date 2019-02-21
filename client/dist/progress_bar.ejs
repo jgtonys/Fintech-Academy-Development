@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="style/progress.css" type="text/css">
+
+</head>
+<body>
+
+    <div class="container">
+    <h1>jQuery imgProgress Plugin Demo</h1>
+        <div class="demo"></div>
+    </div>
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="style/js/radial_progress.js"></script>
+<script>
+var input_percentage = 50;
+var myProgress = $(".demo").imgProgress(
+    {
+        img_url: "https://unsplash.it/600/600?image=778",
+        size: 250,
+        backgroundColor: '#ffffff',
+        foregroundColor: 'blue',
+        percent: input_percentage
+    }
+);
+</script>
+</body>
+</html>

@@ -27,3 +27,7 @@ module.exports.homepage = (req,res,next) =>{
 module.exports.signup_complete = (req,res,next) => {
   res.render('signup_complete');
 }
+
+module.exports.progress = (req,res,next) => {
+  res.render('progress_bar');
+}
