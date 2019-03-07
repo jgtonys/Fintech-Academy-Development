@@ -6,7 +6,15 @@ KISA 핀테크 아카데미 개발과정 팀 프로젝트
 
 <!-- more -->
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/ECDCV55sIlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+*데모 시연 영상*
+
+[![Video Label](src/5.png)](https://www.youtube.com/embed/ECDCV55sIlM)
+
+
+
+
 
 ### WHAT IS SIGBI
 
