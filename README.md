@@ -6,6 +6,12 @@ KISA 핀테크 아카데미 개발과정 팀 프로젝트
 
 <!-- more -->
 
+
+
+<iframe width="640" height="360" src="https://youtu.be/ECDCV55sIlM" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+
+
+
 ### WHAT IS SIGBI
 
 이번 KISA 핀테크 아카데미 개발과정에서는 Open API 를 사용하여 간편 결제 및 송금 시스템을 사용한 서비스 개발을 하게 되었다.
