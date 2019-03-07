@@ -84,13 +84,13 @@
 
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header" style="background-color:#e9d419;color:white">
+        <div class="modal-header">
           <h2>알바생 추가</h2>
         </div>
         <div class="modal-body">
-          <div class="row mb-3">
+          <div class="row">
             <div class="col-8"><input type="text" class="form-control" placeholder="알바생 id 를 입력하세요" aria-label="Username" aria-describedby="basic-addon1"></div>
-            <div class="col-4"><button type="button" class="btn btn-default showbtn" style="background-color:rgba(233, 212, 25, 0.56);border-color:rgba(233, 212, 25, 0.56)">검색</button></div>
+            <div class="col-4"><button type="button" class="btn btn-default showbtn">검색</button></div>
           </div>
 
           <div class="card albaShow mt-3 mb-3" style="display:none">
@@ -107,7 +107,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default confirmBtn" data-dismiss="modal" style="background-color:rgba(233, 212, 25, 0.56);border-color:rgba(233, 212, 25, 0.56)">확인</button>
+            <button type="button" class="btn btn-default confirmBtn" data-dismiss="modal">확인</button>
           </div>
         </div>
 
@@ -162,10 +162,11 @@
           var str = "";
           var str_all = "";
 
-          document.getElementById('staff_recent').innerHTML = "<h1 style='color: rgba(112, 112, 112, 0.75); width:50%; margin:0;padding-top:0.3em;padding-left:0.3em;padding-bottom:0.3em;font-size:24px'>현재 근무중</h1>"
+          document.getElementById('staff_recent').innerHTML = "<h1 style='color: rgba(112, 112, 112, 0.75); width:50%; margin:0'>현재 근무중</h1>"
           for (i = 0; i < count; i++) {
             str += "<tr><td style='width:50px'><img src='/image/staff_small.png' style='max-width:100% ; max-height:100%'></td><td class='tdtext' style='padding-top:10px;'>" + name[i] + "</td><td class='tdtext'  style='padding-top:10px;'>" +
               work_time[i] + "</td></tr>";
+
           }
           document.getElementById('tb').innerHTML = str;
 
@@ -174,13 +175,14 @@
           var count_all = 5;
           var name_all = ["김혁", "지은", "유라", "정연", "준규"];
 
-          document.getElementById('staff_all').innerHTML = "<font style='color: rgba(112, 112, 112, 0.75); font-size:24px;padding-top:0.3em;padding-left:0.3em;padding-bottom:0.3em;margin-right:70%'>전체 알바생</font>" +
-            "<button type='button' class='btn btn-default' data-toggle='modal' data-target='#add_modal' id='add' style='font-size:20px;border-color:#e9d419;background-color:#e9d419' >추가</button>" +
-            "<button type='button' class='btn btn-default' id='delete' style='font-size:20px;border-color:#e9d419;background-color:#e9d419'>삭제</button>";
+          document.getElementById('staff_all').innerHTML = "<font style='color: rgba(112, 112, 112, 0.75); font-size:40px; margin-right:60%'>전체 알바생</font>" +
+            "<button type='button' class='btn btn-default' data-toggle='modal' data-target='#add_modal' id='add' style='font-size:20px;' >추가</button>" +
+            "<button type='button' class='btn btn-default' id='delete' style='font-size:20px;'>삭제</button>";
 
           for (i = 0; i < count_all; i++) {
             str_all += "<tr><td style='width:50px'><img src='/image/staff_small.png' style='max-width:100% ; max-height:100%'></td><td class='tdtext' style='padding-top:10px;'>" + name_all[i] +
               "</td><td style='width:50px'><img src='/image/settings_NoBG.png' id='setting' style='max-width:100% ; max-height:100%'></td></tr>";
+
           }
 
           document.getElementById('tb_all').innerHTML = str_all;

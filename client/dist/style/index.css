@@ -1,3 +1,32 @@
+#signup_choose_label{
+    width: 241px;
+    height: 70px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: 12LotteMartDream;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
+    color: #000000;
+    margin: 40px;
+  }
+
+.sajang, .alba{
+  border: 1px solid #fccd05;
+  border-radius:500px;
+  color:white;
+  font-size:30px;
+
+  width: 127px;
+  height: 131px;
+  box-shadow: 0 7px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fccd05;
+
+  margin: auto;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
 @font-face{
   font-family:'LotteMartDream';
   font-style:normal;
@@ -129,7 +158,7 @@ button {
   opacity: 0.9;
   text-align: center;
   margin-left: 50%;
-  
+
   width: 242px;
   height: 60px;
   box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.16);
@@ -140,7 +169,7 @@ button:hover {
 }
 
 .loginBtn, .signupBtn{
-  
+
     font-family: 12LotteMartDream;
     font-size: 25px;
     font-weight: 500;
@@ -150,17 +179,17 @@ button:hover {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-  
+
     width:350px;
     height: 80px;
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.16);
     background-color: #fccd05;
-  
+
     margin: auto;
     width: 100%;
     margin-bottom: 30px;
   }
-  
+
   label{
     width: 174px;
     height: 29px;
@@ -199,7 +228,7 @@ button:hover {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn, .loginbtn {
+.cancelbtn, .signupbtn, .loginbtn{
   float: left;
   width: 50%;
 }
@@ -222,4 +251,3 @@ button:hover {
      width: 100%;
   }
 }
-
